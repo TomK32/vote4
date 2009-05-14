@@ -1,0 +1,7 @@
+%ul
+  %li= link_to '@vote4', 'http://twitter.com/vote4'
+  %li= link_to 'Login', login_path
+  = yield :navigation
+- if yield :subnavigation
+  %ul
+    = yield :subnavigation

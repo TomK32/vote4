@@ -1,4 +1,4 @@
 class ApplicationController < ActionController::Base
-  layout 'master'
   helper :all
+  before_filter :login_required
 end
