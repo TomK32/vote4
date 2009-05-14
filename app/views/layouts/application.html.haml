@@ -13,7 +13,7 @@
 
     #content  
       - flash.each do |flash_type, message|
-        %div{:class => flash_type}= h(message)
+        %p{:class => 'flash ' + flash_type.to_s}= h(message)
 
       = yield :layout
 
