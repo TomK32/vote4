@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/ananasblau_parser"]
+	path = vendor/plugins/ananasblau_parser
+	url = git://github.com/TomK32/ananasblau_parser.git
