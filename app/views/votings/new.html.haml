@@ -1,0 +1,9 @@
+- title('New voting')
+
+= error_messages_for :voting
+
+- form_for @voting || Voting.new do |form|
+  = render :partial => 'form', :object => form
+  
+  = form.submit t(:'votings.form.create'), :name => nil
+  

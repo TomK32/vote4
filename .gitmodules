@@ -1,3 +1,9 @@
 [submodule "vendor/plugins/ananasblau_parser"]
 	path = vendor/plugins/ananasblau_parser
 	url = git://github.com/TomK32/ananasblau_parser.git
+[submodule "vendor/plugins/twitter_auth"]
+	path = vendor/plugins/twitter_auth
+	url = git://github.com/TomK32/twitter-auth.git
+[submodule "vendor/plugins/permalink_fu"]
+	path = vendor/plugins/permalink_fu
+	url = git://github.com/technoweenie/permalink_fu.git

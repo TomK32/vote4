@@ -1,0 +1,7 @@
+- title('Votings')
+
+- if @votings
+  #votings
+    = render :partial => 'voting', :collection => @votings
+- else
+  No votings yet.
