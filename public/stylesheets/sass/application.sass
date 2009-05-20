@@ -1,8 +1,6 @@
+@import defaults.sass
 body
-  :font-family Arial, sans-serif
-  :background #cef
-  :margin 0
-  :padding 0
+  :background white
   :color #111
 
 a
@@ -11,34 +9,35 @@ a
   img
     :border 0
 
-#wrapper
-  :background white
-  :padding 1.5em 2em
-  :width 55em
-  :-moz-border-radius 1em
-  :-webkit-border-radius 1em
-  :border-radius 1em
-  :margin 1em auto 0.5em
+#container
 
 #footer
   :text-align center
   :font-size 0.8em
   :color #666
   :padding-bottom 1.5em
-
 #header
+  :height 5em
   a
     :font-size 3em
     :color #057
     :text-decoration none
     :margin-bottom 0.3em
 
-#navigation
-  :float right
-  :position relative
-  :top -5em
+#content, #navigation
+  :border-right 5px solid #DDDDFF
+  &.votings
+    :border none
+
+#navigation, #ads
+  :text-align right
   li
+    :padding 0 0.3em
     :display inline
+  a
+    :text-decoration none
+    &:hover
+      :color 000
 
 .flash
   :padding 4px 8px

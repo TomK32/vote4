@@ -1,6 +1,11 @@
 %ul
+  %li= link_to 'new voting', new_voting_path
   %li= link_to '@vote4', 'http://twitter.com/vote4'
-  %li= link_to 'Login', login_path
+  - if logged_in?
+    %li= link_to 'Your votings', user_votings_path(current_user.login)
+    %li= link_to 'Logout', logout_path
+  - else
+    %li= link_to 'Login', login_path 
   = yield :navigation
 - if yield :subnavigation
   %ul

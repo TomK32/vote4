@@ -1,5 +1,5 @@
 
-- if @users.any?
+- if @users and @users.any?
   %h3 Recently Joined
   - for user in @users
     = link_to profile_image(user), twitter_profile_url(user), :target => "_blank"

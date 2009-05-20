@@ -4,14 +4,18 @@
   = render :partial => "shared/head"
 
 %body
-  #wrapper
+  #container
     #header
       = link_to 'vote.ananasblau', root_url
 
     #navigation
       = render :partial => "shared/navigation"
 
-    #content  
+    #ads
+      %ul
+        %li= link_to '@Twitter', 'http://twitter.com/vote4'
+
+    #content{:class => params[:controller]}
       - flash.each do |flash_type, message|
         %p{:class => 'flash ' + flash_type.to_s}= h(message)
 

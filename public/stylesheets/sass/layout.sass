@@ -1,0 +1,25 @@
+@import includes.sass
+#container
+  +grid-container
+  #header
+    +grid(6,16)
+    +alpha
+  #navigation
+    +grid(7,16)
+  #ads
+    +grid(3,16)
+    +omega
+  #sidebar
+    +grid(3,16)
+    +omega
+  #content
+    +grid(13,16)
+    +alpha
+    :padding-bottom 10px
+    &.votings
+      +grid(16,16)
+      +omega
+  #footer
+    +grid(16,16)
+    +grid-container
+    :padding-top 2em
