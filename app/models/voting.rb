@@ -1,5 +1,6 @@
 class Voting < ActiveRecord::Base
   belongs_to :user
+  has_many :votes
   
   has_permalink :question, :update => true
 
