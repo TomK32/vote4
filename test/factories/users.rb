@@ -1,6 +1,5 @@
 
 Factory.define :user do |user|
-  id = rand(1000000)
-  user.login 'User%i' % id
-  user.twitter_id id 
+  user.login 'User'
+  user.twitter_id {rand(1_000_000)}
 end

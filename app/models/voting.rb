@@ -11,4 +11,9 @@ class Voting < ActiveRecord::Base
   def set_user_login
     self.user_login = self.user.login
   end
+  
+  def can_vote?(user)
+    return false if closed?
+    ! votes.exists?(:user_id => user.id)
+  end
 end
