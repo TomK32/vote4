@@ -12,7 +12,6 @@ class CreateVotes < ActiveRecord::Migration
       t.timestamps
     end
     add_index :votes, [:voting_id, :user_id], :unique => true
-    add_index :votes, [:voting_id, :option]
   end
 
   def self.down

@@ -14,7 +14,6 @@ class CreateVotings < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :votings, :question
     add_index :votings, :permalink, :unique => true
   end
 
