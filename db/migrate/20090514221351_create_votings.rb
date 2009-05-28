@@ -6,7 +6,8 @@ class CreateVotings < ActiveRecord::Migration
       
       t.column :user_login, :string, :null => false
       t.column :user_id, :integer, :null => false
-      t.column :options_cache, :text
+      t.column :options, :text
+      t.column :tweet_id, :integer, :limit => 8
       
       t.column :public, :boolean, :null => false, :default => true
       t.column :closed, :boolean, :null => false, :default => false
