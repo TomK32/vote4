@@ -1,4 +1,5 @@
 class VotingsController < ApplicationController
+  skip_before_filter :login_required, :only => [:index, :show]
   before_filter :set_user, :only => :index
   def index
     @votings = @user.votings

@@ -1,2 +1,5 @@
 %div[voting]
-  %h2= link_to voting.question, user_voting_url(voting.user.login, voting.permalink)
+  %h2
+    = link_to voting.question, user_voting_url(voting.user.login, voting.permalink)
+    %small= link_to 'see tweet', twitter_url(voting)
+  

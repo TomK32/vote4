@@ -1,3 +1,13 @@
 - title(@voting.question)
 %div[@voting]
   = render :partial => 'voting', :object => @voting
+  
+  - if @voting.votes.recent.any?
+    %ul= render :partial => 'votes/vote', :collection => @voting.votes.recent
+  - else
+    = t(:'votings.error.no_votes_yet')
+
+- if logged_in? and @voting.can_vote?(current_user)
+  %h2= t(:'voting.title.vote')
+- else
+  = link_to 'Login to vote', login_path

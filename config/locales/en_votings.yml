@@ -1,0 +1,7 @@
+en:
+  votings:
+    error:
+      no_votes_yet: 'No votes yet.'
+    title:
+      recent: 'Recent votings'
+      vote: 'Cast your vote'

@@ -1,0 +1,5 @@
+en:
+  votings:
+    form:
+      create: "Create"
+      question: "Your question…"

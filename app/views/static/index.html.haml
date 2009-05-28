@@ -3,3 +3,13 @@
 %p
   This little twitter app let's you easily create votes or small surveys.
   All you need to do is login via Twitter and follow the simple steps.
+
+- if @votings and @votings.any?
+  #votings.recent
+    %h2= t(:'votings.title.recent')
+    = render :partial => 'votings/voting', :collection => @votings
+
+- if @votes and @votes.any?
+  #votes.recent
+    %h2= t(:'votes.title.recent')
+    %ul= render :partial => 'votes/vote', :collection => @votes

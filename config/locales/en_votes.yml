@@ -1,0 +1,5 @@
+en:
+  votes:
+    title:
+      recent: "Recent votes"
+    by: '{{option}} by {{user}}'
