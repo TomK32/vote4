@@ -7,6 +7,8 @@
   - else
     %li= link_to 'Login', login_path 
   = yield :navigation
+  %li= link_to '@Twitter', 'http://twitter.com/vote4'
 - if yield :subnavigation
   %ul
     = yield :subnavigation
+    

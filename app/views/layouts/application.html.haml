@@ -5,15 +5,14 @@
 
 %body
   #container
-    #header
-      = link_to 'vote.ananasblau', root_url
-
     #navigation
       = render :partial => "shared/navigation"
 
-    #ads
-      %ul
-        %li= link_to '@Twitter', 'http://twitter.com/vote4'
+    #header
+      = link_to image_tag('logo.png', :alt => t(:'app.title')), root_url
+
+    #about
+      = t(:'app.description')
 
     #content{:class => params[:controller]}
       - flash.each do |flash_type, message|

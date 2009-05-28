@@ -1,15 +1,18 @@
 @import defaults.sass
 body
-  :background white
+  :background-color #c8eafa
+  :background-image url(/images/background.png)
+  :background-repeat no-repeat
+  :background-position top center
   :color #111
+  :margin 0
+  :padding 0
 
 a
-  :color #06b
+  :color #d40
   :font-weight bold
   img
     :border 0
-
-#container
 
 #footer
   :text-align center
@@ -17,22 +20,18 @@ a
   :color #666
   :padding-bottom 1.5em
 #header
-  :height 5em
-  a
-    :font-size 3em
-    :color #057
-    :text-decoration none
-    :margin-bottom 0.3em
+  :text-align right
+#header a
+  :font-size 3em
+  :text-decoration none
+  :margin 0
+  :padding 0
 
-#content, #navigation
-  :border-right 5px solid #DDDDFF
-  &.votings
-    :border none
-
-#navigation, #ads
+#navigation
+  :vertical-align bottom
   :text-align right
   li
-    :padding 0 0.3em
+    :padding-right 0.3em
     :display inline
   a
     :text-decoration none

@@ -1,5 +1,5 @@
-%title= head_title('vote.ananasblau')
+%title= head_title(t(:'app.title'))
 
-%meta{ :name=>:description, :content => 'Create votes and small surveys for Twitter' }
-%meta{ :name=>:description, :content => 'voting,surveys,twitter' }
+%meta{ :name=>:description, :content => t(:'app.meta.description') }
+%meta{ :name=>:keywords, :content => t(:'app.meta.keywords') }
 = stylesheet_link_tag %w(layout application forms), :cache => 'cache/all.js'

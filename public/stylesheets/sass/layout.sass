@@ -2,13 +2,14 @@
 #container
   +grid-container
   #header
-    +grid(6,16)
-    +alpha
+    +grid(16,16)
+    :height 80px
   #navigation
+    +grid(16,16)
+    :height 70px
+  #about
+    +grid-prefix(9,16)
     +grid(7,16)
-  #ads
-    +grid(3,16)
-    +omega
   #sidebar
     +grid(3,16)
     +omega
@@ -16,6 +17,7 @@
     +grid(13,16)
     +alpha
     :padding-bottom 10px
+    :margin-top 210px
     &.votings
       +grid(16,16)
       +omega
