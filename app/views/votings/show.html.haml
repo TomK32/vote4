@@ -2,7 +2,15 @@
 %div[@voting]
   = render :partial => 'voting', :object => @voting
   
+  - if @voting.options.is_a?(Array)
+    %ul
+    - @voting.options.each do |option|
+      %li
+        = @voting.votes.count(:conditions => {:option => option})
+        = option
+  
   - if @voting.votes.recent.any?
+    %h2= t(:'votes.title.recent')
     %ul= render :partial => 'votes/vote', :collection => @voting.votes.recent
   - else
     = t(:'votings.error.no_votes_yet')
