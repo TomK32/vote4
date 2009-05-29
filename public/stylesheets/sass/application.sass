@@ -1,4 +1,6 @@
 @import defaults.sass
+@import 960/text.sass
++text
 body
   :background-color #c8eafa
   :background-image url(/images/background.png)
@@ -7,6 +9,7 @@ body
   :color #111
   :margin 0
   :padding 0
+  :font-size 100%
 
 a
   :color #d40
@@ -16,7 +19,6 @@ a
 
 #footer
   :text-align center
-  :font-size 0.8em
   :color #666
   :padding-bottom 1.5em
 #header
@@ -37,6 +39,11 @@ a
     :text-decoration none
     &:hover
       :color 000
+
+h1, h2, .description, .help
+  :background-color #c8eafa
+  :color= #c8eafa - #aaa
+  :padding 3px 0 3px 10px
 
 .flash
   :padding 4px 8px

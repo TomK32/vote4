@@ -3,3 +3,4 @@ en:
     title: 'vote4.ananasblau'
     description: 'Create votes and small surveys for Twitter'
     keywords: 'voting,surveys,twitter'
+    help: "To start a new voting you send a tweet at @vote4 with your question.<br />E.g: <em>@vote4 What's the best rock'n'roll band?</em><br />Everyone else can then just reply and we will count that as a vote."
