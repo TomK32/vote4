@@ -20,11 +20,14 @@ namespace :twitter do
           voting.tweet_id = reply['id']
           voting.options = data[:options]
           voting.created_at = reply['created_at']
-          if ! voting.save
-            logger.error("Couldn't create voting in http://twitter.com/%s/status/%s" % [reply['user']['screen_name'], reply['id']])
+          if voting.new_record?
+            if voting.save
+              agent.twitter.post('/statuses/update.json', 'status' => '@%s created a new voting #%s' % [user.login, voting.permalink])
+            else
+              logger.error("Couldn't create voting in http://twitter.com/%s/status/%s" % [reply['user']['screen_name'], reply['id']])
+            end
           end
           # let user know about
-          agent.twitter.post('/statuses/update.json', 'status' => '@%s created a new voting #%s' % [user.login, voting.permalink])
         when :vote
           if data[:user_screen_name]
             voting = Voting.recent.find_by_user_login(data[:user_screen_name])
